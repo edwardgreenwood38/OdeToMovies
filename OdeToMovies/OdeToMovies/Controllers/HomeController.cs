@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OdeToMovies.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,9 +18,12 @@ namespace OdeToMovies.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your app description page.";
+            var model = new AboutModel();
+            model.Name = "Edward";
+            model.Location = "Fayetteville, NC";
 
-            return View();
+
+            return View(model);
         }
 
         public ActionResult Contact()
